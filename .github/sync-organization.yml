@@ -14,7 +14,7 @@ group:
       - LICENSE
       - SECURITY.md
     repos: |
-      BeaverHouse/ba-torment-data-process@file-sync
+      BeaverHouse/ba-torment-data-process
 
   # Golang
   - files:
@@ -23,4 +23,4 @@ group:
       - source: workflows/codeql-golang.yml
         dest: .github/workflows/codeql.yml
     repos: |
-      BeaverHouse/ba-torment-data-process@file-sync
+      BeaverHouse/ba-torment-data-process

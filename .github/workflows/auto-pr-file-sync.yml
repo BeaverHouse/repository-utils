@@ -3,10 +3,10 @@ name: Auto PR and Merge (File Sync)
 on:
   create:
     branches:
-      - "file-sync"
+      - "file-sync/*"
   push:
     branches:
-      - "file-sync"
+      - "file-sync/*"
 
 permissions:
   pull-requests: write
