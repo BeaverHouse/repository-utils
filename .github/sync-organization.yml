@@ -4,6 +4,7 @@ group:
       - source: .github
         dest: .github
         exclude: |
+          - workflows/codeql.yml
           - workflows/sync-files-organization.yml
           - sync-organization.yml
       - scripts/clean-git-branch.ps1
