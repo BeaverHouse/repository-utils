@@ -1,5 +1,5 @@
 # Script for counting lines of all .tf files in the current directory and subdirectories
-# This is PowerShell script, see count_lines.sh for the Bash version.
+# This is PowerShell script, see count-lines.sh for the Bash version.
 # Written by Austin Lee.
 
 $totalLines = 0

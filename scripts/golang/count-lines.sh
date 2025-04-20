@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Count to lines of all .go files in the current directory and subdirectories
-# This is Bash script, see count_lines.ps1 for the PowerShell version.
+# This is Bash script, see count-lines.ps1 for the PowerShell version.
 # Written by Austin Lee.
 
 total_lines=0
