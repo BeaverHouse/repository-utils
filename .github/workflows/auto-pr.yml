@@ -34,6 +34,10 @@ jobs:
         id: get-pr-body
         run: |
           PR_BODY=$(bash .github/scripts/make-pr-body.sh ${{ github.ref_name }})
+
+          # Escape special characters in PR body
+          PR_BODY=$(printf '%q' "$PR_BODY")
+
           echo "pr_body<<EOF" >> $GITHUB_OUTPUT
           echo "$PR_BODY" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -53,6 +57,9 @@ jobs:
 
           # Replace 'bug:' with 'fix:' in title
           TITLE=$(echo "$TITLE" | sed 's/^bug:/fix:/i')
+
+          # Escape all special characters
+          TITLE=$(printf '%q' "$TITLE")
 
           echo "issue_title=$TITLE" >> $GITHUB_OUTPUT
           echo "labels=$LABELS" >> $GITHUB_OUTPUT
