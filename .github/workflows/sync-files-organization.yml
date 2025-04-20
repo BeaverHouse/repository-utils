@@ -15,4 +15,3 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT_ORGANIZATION }}
           CONFIG_PATH: .github/sync-organization.yml
           BRANCH_PREFIX: file-sync
-          SKIP_PR: true

@@ -5,7 +5,7 @@
   "enforcement": "active",
   "conditions": {
     "ref_name": {
-      "exclude": [],
+      "exclude": ["refs/heads/file-sync/*"],
       "include": ["~DEFAULT_BRANCH"]
     }
   },
