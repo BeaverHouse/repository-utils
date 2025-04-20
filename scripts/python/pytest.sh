@@ -1,0 +1,1 @@
+$PWD/app/.venv/bin/python -m pytest

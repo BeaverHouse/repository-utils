@@ -1,0 +1,25 @@
+group:
+  # General
+  - files:
+      - source: .github
+        dest: .github
+        exclude: |
+          - workflows/sync-files-organization.yml
+          - sync-organization.yml
+      - scripts/clean-git-branch.ps1
+      - scripts/clean-git-branch.sh
+      - CODE_OF_CONDUCT.md
+      - CONTRIBUTING.md
+      - LICENSE
+      - SECURITY.md
+    repos: |
+      BeaverHouse/ba-torment-data-process@file-sync
+
+  # Golang
+  - files:
+      - source: scripts/golang
+        dest: scripts
+      - source: workflows/codeql-golang.yml
+        dest: .github/workflows/codeql.yml
+    repos: |
+      BeaverHouse/ba-torment-data-process@file-sync
