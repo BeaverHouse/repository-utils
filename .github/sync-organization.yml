@@ -4,9 +4,9 @@ group:
       - source: .github
         dest: .github
         exclude: |
-          - workflows/codeql.yml
-          - workflows/sync-files-organization.yml
-          - sync-organization.yml
+          workflows/codeql.yml
+          workflows/sync-files-organization.yml
+          sync-organization.yml
       - scripts/clean-git-branch.ps1
       - scripts/clean-git-branch.sh
       - CODE_OF_CONDUCT.md
