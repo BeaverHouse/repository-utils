@@ -1,4 +1,4 @@
-name: Sync template files (Organization)
+name: Sync common files (Organization)
 
 on:
   workflow_dispatch:
