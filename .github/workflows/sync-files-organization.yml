@@ -3,6 +3,10 @@ name: Sync common files (Organization)
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
