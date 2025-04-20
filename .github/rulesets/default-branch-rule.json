@@ -5,7 +5,7 @@
   "enforcement": "active",
   "conditions": {
     "ref_name": {
-      "exclude": ["refs/heads/file-sync/*"],
+      "exclude": [],
       "include": ["~DEFAULT_BRANCH"]
     }
   },
@@ -45,5 +45,11 @@
       "type": "required_linear_history"
     }
   ],
-  "bypass_actors": []
+  "bypass_actors": [
+    {
+      "actor_id": null,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "pull_request"
+    }
+  ]
 }
