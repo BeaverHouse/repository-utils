@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch all history
+          fetch-depth: 0
 
       - name: Exit if no changes
         run: |
@@ -38,8 +38,6 @@ jobs:
           echo "$PR_BODY" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      # GitHub CLI is recommended for creating PRs with existing branches
-      # https://github.com/peter-evans/create-pull-request/blob/main/docs/common-issues.md#create-using-an-existing-branch-as-the-pr-branch
       - name: Create Pull Request
         id: create-pr
         run: |
