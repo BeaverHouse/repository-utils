@@ -32,6 +32,14 @@ It uses the [BetaHuhn/repo-file-sync-action](https://github.com/BetaHuhn/repo-fi
 This workflow use PAT to sync files and create PRs with `file-sync` prefix branch.  
 GitHub doesn't allow to self-approve PRs. So we need bypass rule for branch protection rules to merge these PRs.
 
+You need to set the following permissions to use this workflow.
+
+```yaml
+permissions:
+  contents: read
+  pull-requests: write
+```
+
 - `sync-files-organization.yml`: File sync for organization repositories
 - (TBU) `sync-files-personal.yml`: File sync for personal repositories
 
