@@ -29,7 +29,16 @@ CodeQL will be triggered on push to `main` branch and some specific branches.
 
 **This workflow is used only in current repository.**  
 It uses the [BetaHuhn/repo-file-sync-action](https://github.com/BetaHuhn/repo-file-sync-action) to sync files between repositories.  
-I set `SKIP_PR` to `true` to avoid creating PRs with PAT.
+This workflow use PAT to sync files and create PRs with `file-sync` prefix branch.  
+GitHub doesn't allow to self-approve PRs. So we need bypass rule for branch protection rules to merge these PRs.
+
+You need to set the following permissions to use this workflow.
+
+```yaml
+permissions:
+  contents: read
+  pull-requests: write
+```
 
 - `sync-files-organization.yml`: File sync for organization repositories
 - (TBU) `sync-files-personal.yml`: File sync for personal repositories
@@ -43,11 +52,6 @@ I set `SKIP_PR` to `true` to avoid creating PRs with PAT.
     - These branches are created from issues.
   - Extracts issue information and labels for PR creation.
   - Enables auto-merge with squash strategy.
-
-- `auto-pr-file-sync.yml`
-
-  - Similar to `auto-pr.yml` but specifically for `file-sync` branch.
-  - It skips the issue information extraction, because it doesn't exist.
 
 > [!IMPORTANT]
 >
