@@ -44,11 +44,6 @@ I set `SKIP_PR` to `true` to avoid creating PRs with PAT.
   - Extracts issue information and labels for PR creation.
   - Enables auto-merge with squash strategy.
 
-- `auto-pr-file-sync.yml`
-
-  - Similar to `auto-pr.yml` but specifically for `file-sync` branch.
-  - It skips the issue information extraction, because it doesn't exist.
-
 > [!IMPORTANT]
 >
 > 1. You need to set `fetch-depth: 0` to fetch all history.
